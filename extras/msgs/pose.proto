@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package extras.msgs;
+
+import "extras/msgs/vector3d.proto";
+
+message Pose {
+  Vector3d position = 1;
+}
