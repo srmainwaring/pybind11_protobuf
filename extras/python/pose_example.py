@@ -1,8 +1,9 @@
 '''
-Example using the extra.msgs.vector3d protobuf
+Example using the extras.msgs.pose protobuf
 '''
 
 from extras.msgs.pose_pb2 import Pose
+from extras.msgs.vector3d_pb2 import Vector3d
 
 def main():
   print("Pose Example")
@@ -19,6 +20,15 @@ def main():
   print("IsInstance")
   print("----------")
   print("isinstance: {}".format(isinstance(msg, Pose)))
+
+  print("\nCompose")
+  print("-------")
+  pos = Vector3d()
+  pos.x = 53.1
+  pos.y = 23.7
+  pos.z = 10.2
+  msg.position.CopyFrom(pos)
+  print("{}".format(msg))
 
 
 if __name__ == "__main__":

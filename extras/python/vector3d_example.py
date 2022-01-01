@@ -1,5 +1,5 @@
 '''
-Example using the extra.msgs.vector3d protobuf
+Example using the extras.msgs.vector3d protobuf
 '''
 
 from extras.msgs.vector3d_pb2 import Vector3d
