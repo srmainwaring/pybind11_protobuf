@@ -24,3 +24,17 @@ py_binary(
       "//extras/msgs:pose_py_pb2",
   ],
 )
+
+py_binary(
+  name = "extras_example",
+  main = "extras_example.py",
+  srcs = ["extras_example.py"],
+  data = [
+      "//extras:extras_module.so",
+      "@com_google_protobuf//:proto_api",
+  ],
+  deps = [
+      "//extras/msgs:vector3d_py_pb2",
+      "//extras/msgs:pose_py_pb2",
+  ],
+)
