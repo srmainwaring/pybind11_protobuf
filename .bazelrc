@@ -11,3 +11,6 @@ build --host_cxxopt=-std=c++17
 # Enable logging error output.
 test --test_output=errors
 test --test_summary=detailed
+
+# Enable using fast cpp for protobufs.
+build --define use_fast_cpp_protos=true

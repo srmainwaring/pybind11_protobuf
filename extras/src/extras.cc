@@ -1,6 +1,6 @@
 #include "extras.hh"
 
-extras::msgs::Vector3d GetVector3d(double x, double y, double z)
+extras::msgs::Vector3d MakeVector3d(double x, double y, double z)
 {
   extras::msgs::Vector3d msg;
   msg.set_x(x);
@@ -9,11 +9,25 @@ extras::msgs::Vector3d GetVector3d(double x, double y, double z)
   return msg;
 }
 
-void SetVector3d(const extras::msgs::Vector3d& msg)
+void TakeVector3d(const extras::msgs::Vector3d& msg)
 {
-  std::cout << "Set Vector3d" << std::endl;
-  std::cout << "------------" << std::endl;
-  std::cout << "x: " << msg.x() << std::endl;
-  std::cout << "y: " << msg.y() << std::endl;
-  std::cout << "y: " << msg.z() << std::endl;
+  std::cout << msg.DebugString();
+}
+
+extras::msgs::Pose MakePose(double x, double y, double z)
+{
+  extras::msgs::Vector3d pos;
+  pos.set_x(x);
+  pos.set_y(y);
+  pos.set_z(z);
+
+  extras::msgs::Pose msg;
+  *msg.mutable_position() = pos;
+
+  return msg;
+}
+
+void TakePose(const extras::msgs::Pose& msg)
+{
+  std::cout << msg.DebugString();
 }

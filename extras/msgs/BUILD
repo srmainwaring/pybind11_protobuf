@@ -6,43 +6,43 @@ load("@pybind11_bazel//:build_defs.bzl", "pybind_extension")
 
 # vector3d.proto
 proto_library(
-    name = "vector3d_proto",
-    srcs = [
-      "vector3d.proto"
-    ],
-    visibility = ["//visibility:public"],
+  name = "vector3d_proto",
+  srcs = [
+    "vector3d.proto"
+  ],
+  visibility = ["//visibility:public"],
 )
 
 cc_proto_library(
-    name = "vector3d_cc_proto",
-    deps = [":vector3d_proto"],
-    visibility = ["//visibility:public"],
+  name = "vector3d_cc_proto",
+  deps = [":vector3d_proto"],
+  visibility = ["//visibility:public"],
 )
 
 py_proto_library(
-    name = "vector3d_py_pb2",
-    deps = [":vector3d_proto"],
-    visibility = ["//visibility:public"],
+  name = "vector3d_py_pb2",
+  deps = [":vector3d_proto"],
+  visibility = ["//visibility:public"],
 )
 
 # pose.proto
 proto_library(
-    name = "pose_proto",
-    srcs = [
-      "pose.proto"
-    ],
-    deps = [":vector3d_proto"],
-    visibility = ["//visibility:public"],
+  name = "pose_proto",
+  srcs = [
+    "pose.proto"
+  ],
+  deps = [":vector3d_proto"],
+  visibility = ["//visibility:public"],
 )
 
 cc_proto_library(
-    name = "pose_cc_proto",
-    deps = [":pose_proto"],
-    visibility = ["//visibility:public"],
+  name = "pose_cc_proto",
+  deps = [":pose_proto"],
+  visibility = ["//visibility:public"],
 )
 
 py_proto_library(
-    name = "pose_py_pb2",
-    deps = [":pose_proto"],
-    visibility = ["//visibility:public"],
+  name = "pose_py_pb2",
+  deps = [":pose_proto"],
+  visibility = ["//visibility:public"],
 )

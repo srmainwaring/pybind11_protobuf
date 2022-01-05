@@ -6,10 +6,10 @@ py_binary(
   main = "vector3d_example.py",
   srcs = ["vector3d_example.py"],
   data = [
-      "@com_google_protobuf//:proto_api",
+    "@com_google_protobuf//:proto_api",
   ],
   deps = [
-      "//extras/msgs:vector3d_py_pb2",
+    "//extras/msgs:vector3d_py_pb2",
   ],
 )
 
@@ -18,10 +18,10 @@ py_binary(
   main = "pose_example.py",
   srcs = ["pose_example.py"],
   data = [
-      "@com_google_protobuf//:proto_api",
+    "@com_google_protobuf//:proto_api",
   ],
   deps = [
-      "//extras/msgs:pose_py_pb2",
+    "//extras/msgs:pose_py_pb2",
   ],
 )
 
@@ -30,11 +30,11 @@ py_binary(
   main = "extras_example.py",
   srcs = ["extras_example.py"],
   data = [
-      "//extras:extras_module.so",
-      "@com_google_protobuf//:proto_api",
+    "//extras:extras_module.so",
+    "@com_google_protobuf//:proto_api",
   ],
   deps = [
-      "//extras/msgs:vector3d_py_pb2",
-      "//extras/msgs:pose_py_pb2",
+    "//extras/msgs:vector3d_py_pb2",
+    "//extras/msgs:pose_py_pb2",
   ],
 )
