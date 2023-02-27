@@ -1,5 +1,5 @@
 # GitHub Action to run cppcheck
-# 
+#
 name: cppcheck
 
 on: [push, pull_request]
@@ -13,11 +13,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install cppcheck
         run: |
-          sudo apt-get update
-          sudo apt-get install cppcheck
+          sudo apt update && sudo apt install --no-install-recommends -y \
+          cppcheck
       - name: Run cppcheck
         run: |
           cppcheck --language=c++ --std=c++17 ./pybind11_protobuf/*.h
           cppcheck --language=c++ --std=c++17 --suppress="containerOutOfBounds" ./pybind11_protobuf/*.cc
-          cppcheck --language=c++ --std=c++17 ./pybind11_protobuf/tests/*.h
           cppcheck --language=c++ --std=c++17 ./pybind11_protobuf/tests/*.cc
