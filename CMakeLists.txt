@@ -27,13 +27,17 @@ find_package(Python COMPONENTS Interpreter Development)
 # Build dependencies
 
 set(_absl_repository "https://github.com/abseil/abseil-cpp.git")
-set(_absl_version 20230125)
-set(_absl_tag 20230125.3)
+# set(_absl_version 20230125)
+# set(_absl_tag 20230125.3)
+set(_absl_version 20230802)
+set(_absl_tag 20230802.1)
 find_package(absl ${_absl_version} QUIET)
 
 set(_protobuf_repository "https://github.com/protocolbuffers/protobuf.git")
-set(_protobuf_version 3.23.3)
-set(_protobuf_tag v23.3)
+# set(_protobuf_version 3.23.3)
+# set(_protobuf_tag v23.3)
+set(_protobuf_version 3.25.0)
+set(_protobuf_tag v25.0)
 # find_package(Protobuf ${_protobuf_version} QUIET)
 
 set(_pybind11_repository "https://github.com/pybind/pybind11.git")
