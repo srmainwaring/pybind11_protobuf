@@ -34,7 +34,7 @@ find_package(absl ${_absl_version} QUIET)
 set(_protobuf_repository "https://github.com/protocolbuffers/protobuf.git")
 set(_protobuf_version 3.23.3)
 set(_protobuf_tag v23.3)
-find_package(Protobuf ${_protobuf_version} QUIET)
+# find_package(Protobuf ${_protobuf_version} QUIET)
 
 set(_pybind11_repository "https://github.com/pybind/pybind11.git")
 set(_pybind11_version 2.11.1)
